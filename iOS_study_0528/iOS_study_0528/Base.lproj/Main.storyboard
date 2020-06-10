@@ -74,7 +74,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Oia-Eg-uT9">
-                                        <rect key="frame" x="0.5" y="433" width="413.5" height="30"/>
+                                        <rect key="frame" x="10" y="433" width="394" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volumn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5s-0r-ILn">
                                                 <rect key="frame" x="0.0" y="0.0" width="57.5" height="30"/>
@@ -83,7 +83,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-qo-njq">
-                                                <rect key="frame" x="84.5" y="0.0" width="331" height="31"/>
+                                                <rect key="frame" x="84.5" y="0.0" width="311.5" height="31"/>
                                                 <connections>
                                                     <action selector="slChangeVolumn:" destination="BYZ-38-t0r" eventType="valueChanged" id="HiU-kB-dC0"/>
                                                 </connections>
@@ -120,6 +120,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Oia-Eg-uT9" secondAttribute="trailing" constant="10" id="UCd-Ew-JmQ"/>
+                                    <constraint firstItem="Oia-Eg-uT9" firstAttribute="leading" secondItem="xgD-gR-Opw" secondAttribute="leading" constant="10" id="tZx-36-hsh"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -134,11 +138,15 @@
                     <connections>
                         <outlet property="btnPause" destination="Hgd-he-9Yd" id="QLv-Ka-LzF"/>
                         <outlet property="btnPlay" destination="9x0-pp-7lm" id="Vam-ZN-W1M"/>
+                        <outlet property="btnRecord" destination="ceg-LR-iCY" id="0zm-dr-su2"/>
                         <outlet property="btnStop" destination="p38-cd-6zT" id="aab-eK-7vm"/>
                         <outlet property="lblCurrentTime" destination="wqy-Uu-fJt" id="INq-3a-Nf5"/>
                         <outlet property="lblEndTime" destination="48z-Ls-K3N" id="TZS-mU-RDp"/>
                         <outlet property="pvPrograssView" destination="bdO-8i-28X" id="wA2-cJ-ZNV"/>
+                        <outlet property="recordTime" destination="2Av-BC-izA" id="T1A-9a-DEI"/>
                         <outlet property="slVolumn" destination="ly1-qo-njq" id="RrL-Vf-ogE"/>
+                        <outlet property="swtRecord" destination="e4q-RW-lsH" id="tEC-rN-fYP"/>
+                        <outlet property="volumnSL" destination="ly1-qo-njq" id="ix7-tg-10c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

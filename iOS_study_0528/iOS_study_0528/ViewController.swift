@@ -13,7 +13,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     var audioPlayer : AVAudioPlayer!
     var audioFile : URL!
-    let MAX_VOLUMN : Float = 10.0
+    let MAX_VOLUMN : Float = 15.0
     var progressTimer : Timer!
     
     
@@ -24,6 +24,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var btnPause: UIButton!
     @IBOutlet weak var btnStop: UIButton!
     @IBOutlet weak var slVolumn: UISlider!
+    
+ 
+    @IBOutlet weak var swtRecord: UISwitch!
+    @IBOutlet weak var btnRecord: UIButton!
+    @IBOutlet weak var recordTime: UILabel!
     
     let timePlayerSelector : Selector = #selector(ViewController.updatePlayTime)
     
@@ -99,6 +104,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func slChangeVolumn(_ sender: Any) {
+        
         audioPlayer.volume = slVolumn.value
     }
     
